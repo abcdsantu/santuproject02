@@ -42,14 +42,6 @@ pipeline {
                 }
             }
         }
-        stage ("UploadToNexus") {
-            steps {
-                script {
-                    UploadtoNexus()
-                }
-            }
-            
-        }
         
         stage ("Build the docker image") {
             steps {
@@ -88,7 +80,4 @@ pipeline {
             }
         }
     }
-}
-def UploadtoNexus() {
-    nexusArtifactUploader artifacts: [[artifactId: '', classifier: '', file: 'target/vprofile-0.0.2-SNAPSHOT.war', type: 'vprofile']], credentialsId: 'nexus3', groupId: 'com.visualpathit', nexusUrl: '192.168.145.131:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'santuapp022', version: '0.0.2-SNAPSHOT'
 }
