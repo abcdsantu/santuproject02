@@ -90,5 +90,5 @@ pipeline {
     }
 }
 def UploadtoNexus() {
-     nexusArtifactUploader artifacts: [[artifactId: '', classifier: '', file: 'target/vprofile-v2.war', type: 'vprofile']], credentialsId: 'nexus3', groupId: 'com.visualpathit', nexusUrl: '192.168.145.131:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'santuapp02', version: 'v2'
+     nexusArtifactUploader artifacts: [[artifactId: '', classifier: '', file: 'target/vprofile-v2-SNAPSHOT.war', type: 'vprofile']], credentialsId: 'nexus3', groupId: 'com.visualpathit', nexusUrl: '192.168.145.131:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'santuapp02', version: 'v2-SNAPSHOT'
 }
