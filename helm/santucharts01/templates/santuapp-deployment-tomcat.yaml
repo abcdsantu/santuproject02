@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: santuapp
-          image: santu458/santuappdock:9
+          image: {{ .Values.app.image}}
           ports:
             - name: santuapp-port
               containerPort:  8080
